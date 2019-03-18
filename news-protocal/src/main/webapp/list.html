@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="./img/style.css">
+    <link rel="stylesheet" href="./img/swiper.min.css">
+
+    <link rel="stylesheet" type="text/css" href="./css/easyui.css">
+    <link rel="stylesheet" type="text/css" href="./css/icon.css">
+    <link rel="stylesheet" type="text/css" href="./css/demo.css">
+</head>
+<body>
+<!-- 顶部搜索	 - start -->
+<div class="header">
+    <div class="head">
+        <div class="logo"><a href="#"><img src="./img/logo.png" width="100%" alt=""></a></div>
+        <form action="" class="formBox">
+            <input type="text" class="inputSeach" id="inputSeach" name="keywords">
+            <input type="submit" value="搜索一下" class="inputSub">
+            <div class="recommend">
+                <div class="item">美团</div>
+                <div class="item">百度外卖</div>
+                <div class="item">美团</div>
+                <div class="item">百度外卖</div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- 顶部搜索	 - end -->
+
+<div class="contentBox">
+    <!-- 中间左边区域 - start -->
+    <div class="contener_l">
+        <div class="count">
+            <div class="showTool">
+                <div class="toolBox">搜索引擎为您找到相关结果约17,800,000个 <span class="tool">搜索工具</span></div>
+                <div class="toolBox">
+
+                    从:<input class="easyui-datetimebox" style="height: 25px ; width: 100px" name="startDate"/>
+                    至:<input class="easyui-datetimebox" style="height: 25px ; width: 100px" name="endDate"/>
+                    <input type="button" id="confirm" value="确定">
+
+                    <input name="editor" placeholder="请输入编辑" style="height: 15px ; width: 100px"/>
+                    <input name="source" placeholder="请输入来源" style="height: 15px ; width: 100px"/>
+                    <span class="tool openTool">收起工具</span>
+                </div>
+
+            </div>
+        </div>
+        <!--<div class="advItem">-->
+        <!--<div class="item">-->
+        <!--<div class="title"><img src="./img/logo.png" width="30px" height="30px" class="logo" alt=""><a-->
+        <!--href="#"></a>北京传智播客教育科技股份有限公司 <span>官网</span></div>-->
+        <!--<div class="contentInfo_src">-->
+        <!--<a href="#"><img src="./img/item.jpeg" alt="" class="imgSrc" width="121px" height="75px"></a>-->
+        <!--<div class="infoBox">-->
+        <!--<p class="describe">-->
+        <!--大数据学习已然成为时代所趋，相较于目前市面上的书籍及学习视频，大数据培训更适用于对大数据感兴趣的人群，通过培训老师丰富的大数据实战经验分享，-->
+        <!--能在大数据初期学习中，少走很多弯路，后期的项目实战，结合企业及时下大数据热门应用，可快速接轨大数据发展方向。-->
+        <!--</p>-->
+        <!--<p><a class="showurl" href="www.itcast.cn">www.itcast.cn 2018-08</a> <span class="lab"><a-->
+        <!--href="">传智快照 - </a><a href="">品牌广告</a></span></p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="advTable">-->
+        <!--<div class="lab">-->
+        <!--<div class="on">传智播客</div>-->
+        <!--<div>传智播客</div>-->
+        <!--<div>传智播客</div>-->
+        <!--<div>传智播客</div>-->
+        <!--<div>传智播客</div>-->
+        <!--<div>传智播客</div>-->
+        <!--</div>-->
+        <!--<div class="cont">-->
+        <!--<div class="items">-->
+        <!--<img src="./img/item.jpeg" alt="">-->
+        <!--<div class="itemsInfo">-->
+        <!--<div class="tit">北京传智播客教育科技股份有限公司一</div>-->
+        <!--<ul>-->
+        <!--<li><a href="#">传智播客</a></li>-->
+        <!--<li><a href="#">传智播客</a></li>-->
+        <!--<li><a href="#">传智播客</a></li>-->
+        <!--<li><a href="#">传智播客</a></li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--<div class="clear"></div>-->
+        <!--<div class="listTit">-->
+        <!--<a href="">-->
+        <!--<div>传智播客</div>-->
+        <!--<div>传智播客</div>-->
+        <!--<div>传智播客</div>-->
+        <!--<div>传智播客</div>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="items">-->
+
+        <!--<img src="./img/item.jpeg" alt="">-->
+        <!--<div class="itemsInfo">-->
+        <!--<div class="tit">北京传智播客教育科技股份有限公司二</div>-->
+        <!--<ul>-->
+        <!--<li><a href="#">传智播客</a></li>-->
+        <!--<li><a href="#">传智播客</a></li>-->
+        <!--<li><a href="#">传智播客</a></li>-->
+        <!--<li><a href="#">传智播客</a></li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--<div class="clear"></div>-->
+        <!--<div class="listTit">-->
+        <!--<a href="">-->
+        <!--<div>传智播客</div>-->
+        <!--<div>传智播客</div>-->
+        <!--<div>传智播客</div>-->
+        <!--<div>传智播客</div>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="items">-->
+
+        <!--<img src="./img/item.jpeg" alt="">-->
+        <!--<div class="itemsInfo">-->
+        <!--<div class="tit">北京传智播客教育科技股份有限公司三</div>-->
+        <!--<ul>-->
+        <!--<li><a href="#">传智播客</a></li>-->
+        <!--<li><a href="#">传智播客</a></li>-->
+        <!--<li><a href="#">传智播客</a></li>-->
+        <!--<li><a href="#">传智播客</a></li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--<div class="clear"></div>-->
+        <!--<div class="listTit">-->
+        <!--<a href="">-->
+        <!--<div>传智播客</div>-->
+        <!--<div>传智播客</div>-->
+        <!--<div>传智播客</div>-->
+        <!--<div>传智播客</div>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="items">-->
+
+        <!--<img src="./img/item.jpeg" alt="">-->
+        <!--<div class="itemsInfo">-->
+        <!--<div class="tit">北京传智播客教育科技股份有限公司四</div>-->
+        <!--<ul>-->
+        <!--<li><a href="#">传智播客</a></li>-->
+        <!--<li><a href="#">传智播客</a></li>-->
+        <!--<li><a href="#">传智播客</a></li>-->
+        <!--<li><a href="#">传智播客</a></li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--<div class="clear"></div>-->
+        <!--<div class="listTit">-->
+        <!--<a href="">-->
+        <!--<div>传智播客</div>-->
+        <!--<div>传智播客</div>-->
+        <!--<div>传智播客</div>-->
+        <!--<div>传智播客</div>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="items">-->
+
+        <!--<img src="./img/item.jpeg" alt="">-->
+        <!--<div class="itemsInfo">-->
+        <!--<div class="tit">北京传智播客教育科技股份有限公司五</div>-->
+        <!--<ul>-->
+        <!--<li><a href="#">传智播客</a></li>-->
+        <!--<li><a href="#">传智播客</a></li>-->
+        <!--<li><a href="#">传智播客</a></li>-->
+        <!--<li><a href="#">传智播客</a></li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--<div class="clear"></div>-->
+        <!--<div class="listTit">-->
+        <!--<a href="">-->
+        <!--<div>传智播客</div>-->
+        <!--<div>传智播客</div>-->
+        <!--<div>传智播客</div>-->
+        <!--<div>传智播客</div>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="items">-->
+
+        <!--<img src="./img/item.jpeg" alt="">-->
+        <!--<div class="itemsInfo">-->
+        <!--<div class="tit">北京传智播客教育科技股份有限公司六</div>-->
+        <!--<ul>-->
+        <!--<li><a href="#">传智播客</a></li>-->
+        <!--<li><a href="#">传智播客</a></li>-->
+        <!--<li><a href="#">传智播客</a></li>-->
+        <!--<li><a href="#">传智播客</a></li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--<div class="clear"></div>-->
+        <!--<div class="listTit">-->
+        <!--<a href="">-->
+        <!--<div>传智播客</div>-->
+        <!--<div>传智播客</div>-->
+        <!--<div>传智播客</div>-->
+        <!--<div>传智播客</div>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <div class="itemList">
+        </div>
+
+        <div class="relevant">
+            <div class="title">
+                相关搜索
+            </div>
+            <div>
+                <a href="#">仪表传智播客器</a>
+                <a href="#">传智播客</a>
+                <a href="#">asp是什么语言</a>
+                <a href="#">上海雷迅am2-40价格</a>
+                <a href="#">上海雷迅销售电话</a>
+                <a href="#">上海雷迅传智播客ak-mg</a>
+                <a href="#">aspl</a>
+                <a href="#">pdm箱</a>
+                <a href="#">pdm配电单元</a>
+            </div>
+        </div>
+
+        <div class="pageList">
+            <ul>
+                <li><a href="#">< 上一页</a></li>
+                <li>1</li>
+                <li>2</li>
+                <li class="on">3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>下一页 ></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 中间左边区域 - end -->
+
+    <!-- 中间右边区域 - start -->
+
+    <div class="contener_r">
+        <div class="advert">
+            <div class="title">国科简提供区块链系统</div>
+            <div class="ban_swiper">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="./img/adv1.jpeg" alt=""></div>
+                        <div class="swiper-slide"><img src="./img/adv2.jpeg" alt=""></div>
+                        <div class="swiper-slide"><img src="./img/adv1.jpeg" alt=""></div>
+                        <div class="swiper-slide"><img src="./img/adv2.jpeg" alt=""></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <div class="des">
+                星域云 开创了全球领先的共享计算生态,以共享模式和区块链技术收集海量计算资源,将百万节点资源整合,开放给广大互联网企业,实现更高性价比,更易扩展,更环保的计算方式.
+            </div>
+            <div class="showUrl"><a href="#">国科简（北京）科技有限公司</a> <span>品牌广告</span></div>
+        </div>
+
+        <div class="hotSeach">
+            <div class="title">搜索热点
+                <div class="pageListes">
+                    <a href=""> < </a>
+                    <a href="" class="on"> <span></span></a>
+                    <a href=""> <span></span></a>
+                    <a href=""> <span></span></a>
+                    <a href="" class="go"> ></a></div>
+            </div>
+            <div class="seachItem">
+                <div class="topLab">排名 <span>搜索指数</span></div>
+                <li class="A"><a href=""><span>1</span>新闻联播 下等人 <span>1345<em></em></span></a></li>
+                <li class="B"><a href=""><span>2</span>新闻联播 下等人 <span>1345<em></em></span></a></li>
+                <li class="C"><a href=""><span>3</span>新闻联播 下等人 <span>1345<em></em></span></a></li>
+                <li><a href=""><span>4</span>新闻联播 下等人 <span>1345<em></em></span></a></li>
+                <li><a href=""><span>5</span>新闻联播 下等人 <span>1345<em></em></span></a></li>
+                <li><a href=""><span>6</span>新闻联播 下等人 <span>1345<em class="add"></em></span></a></li>
+                <li><a href=""><span>7</span>新闻联播 下等人 <span>1345<em></em></span></a></li>
+                <li><a href=""><span>8</span>新闻联播 下等人 <span>1345<em></em></span></a></li>
+                <li><a href=""><span>9</span>新闻联播 下等人 <span>1345<em class="add"></em></span></a></li>
+                <li><a href=""><span>10</span>新闻联播 下等人 <span>1345<em></em></span></a></li>
+                <div class="source"> 数据来源 百度数据库</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 中间右边区域 - end -->
+
+</div>
+<script src="./img/swiper.min.js"></script>
+<script src="./img/jquery.min.js"></script>
+<script src="./img/jquery.easyui.min.js"></script>
+<script>
+
+    var swiper = new Swiper('.swiper-container', {
+        spaceBetween: 30,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+        autoplay: true
+    });
+    var swiper = new Swiper('.swiper-hot-container', {
+        spaceBetween: 30,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+        autoplay: true
+    });
+
+    $('.tool').click(function () {
+        if ($('.showTool').hasClass('act')) {
+            $('.showTool').removeClass('act')
+        } else {
+            $('.showTool').addClass('act')
+        }
+    })
+
+    $('.inputSeach').focus(function () {
+        $('.recommend').css({display: 'block'})
+    })
+    $('.inputSeach').blur(function () {
+        setTimeout(function () {
+            $('.recommend').css({display: 'none'})
+        }, 100)
+    })
+    $('.recommend .item').click(function () {
+        $('.inputSeach').val($(this).text())
+        $('.recommend').css({display: 'none'})
+    })
+
+    var tabInd = 0;
+    var time = ''
+
+    $('.advTable .lab div').hover(function () {
+        clearInterval(time)
+        tabInd = $(this).index();
+        tabSwitch(tabInd)
+    }, function () {
+        time = setInterval(automaticSwitch, 3000)
+    })
+
+    function tabSwitch(obj) {
+        $('.advTable .lab div').eq(obj).addClass('on').siblings().removeClass('on')
+        tabInd = obj
+        $('.advTable .cont .items').eq(tabInd).show().siblings().hide()
+    }
+
+    function automaticSwitch() {
+        tabInd++
+        if (tabInd >= $('.advTable .lab div').length) {
+            tabInd = 0;
+        }
+        tabSwitch(tabInd)
+    }
+
+    time = setInterval(automaticSwitch, 3000)
+
+
+</script>
+<script>
+    var pageSize = 15;
+    $(function () {
+        init.setup();
+        action.bind();
+    });
+    var init = {
+        // 初始化页面
+        setup: function () {
+            this.initPage(1, pageSize)
+        },
+        initPage: function (page, pageSize) {
+            var kv = window.location.search;
+            if (kv == null || kv == "") {
+                window.location.href = "/index.html";
+
+            }
+            var v = kv.split("=")[1];
+            v = decodeURI(v);
+            v =  v.replace(/\+/g," ");
+            v =  v.replace(/%2B/g,"+");
+            $("[name=keywords]").val(v);
+            var data = {
+                keywords:v,
+                "pageBean.page": page,
+                "pageBean.pageSize": pageSize
+            }
+            network.search(data).done(function (result) {
+                if (result != null) {
+                    flush(result);
+                }
+            })
+        }
+    }
+
+    var action = {
+        bind: function () {
+            this.page();
+            this.searchChange();
+        },
+        // 分页查询
+        page: function () {
+            $(document).on("click", ".pageList li", function () {
+                var keywords = $("[name=keywords]").val();
+                var editor = $("[name=editor]").val();
+                var source = $("[name=source]").val();
+                var startDate = $("[name=startDate]").val();
+                var endDate = $("[name=endDate]").val();
+                var page = $(this).find("a").data("page");
+                var pageSize = pageSize;
+                var data = {
+                    keywords: keywords,
+                    editor: editor,
+                    source: source,
+                    startDate: startDate,
+                    endDate: endDate,
+                    "pageBean.page": page,
+                    "pageBean.pageSize": pageSize
+                };
+                network.search(data).done(function (result) {
+                    if (result != null) {
+                        flush(result);
+                    }
+                })
+            })
+        },
+        // 搜索查询
+        searchChange: function () {
+            $(document).on("click", "#confirm", function () {
+                var keywords = $("[name=keywords]").val();
+                var editor = $("[name=editor]").val();
+                var source = $("[name=source]").val();
+                var startDate = $("[name=startDate]").val();
+                var endDate = $("[name=endDate]").val();
+
+                var data = {
+                    keywords: keywords,
+                    editor: editor,
+                    source: source,
+                    startDate: startDate,
+                    endDate: endDate,
+                };
+                network.search(data).done(function (result) {
+                    if (result != null) {
+                        page(result.data);
+                    }
+                })
+            });
+            $(document).on("change", "[name=keywords],[name=editor],[name=source],[name=startDate],[name=endDate]", function () {
+                var keywords = $("[name=keywords]").val();
+                var editor = $("[name=editor]").val();
+                var source = $("[name=source]").val();
+                var startDate = $("[name=startDate]").val();
+                var endDate = $("[name=endDate]").val();
+                var data = {
+                    keywords: keywords,
+                    editor: editor,
+                    source: source,
+                    startDate: startDate,
+                    endDate: endDate
+                };
+                network.search(data).done(function (result) {
+                    if (result != null) {
+                        page(result.data);
+                    }
+                })
+            })
+        }
+    }
+    var network = {
+        search: function (data) {
+            var df = $.Deferred();
+            $.post("/news/search", data, function (result) {
+                df.resolve(result)
+            }, "json");
+            return df;
+        }
+    }
+
+    function flush(data) {
+        if (data == null || data.newsList=="") {
+            window.location.href = "/index.html";
+            return;
+        }
+        // data 就是返回的json数据 : 集合 数组
+        $(".itemList").html("");
+        $(data.newsList).each(function () {
+            var docurl = this.docurl;
+            docurl = docurl.substring(0, 20) + "...";
+            var divStr = "<div class=\"item\">\n" +
+                "                    <div class=\"title\"><a href=\"" + this.docurl + "\">" + this.title + "</a></div>\n" +
+                "                <div class=\"contentInfo_src\">\n" +
+                "                    <a href=\"#\"><img src=\"./img/item.jpeg\" alt=\"\" class=\"imgSrc\" width=\"121px\" height=\"75px\"></a>\n" +
+                "                    <div class=\"infoBox\">\n" +
+                "                    <p class=\"describe\">\n" +
+                "                   " + this.content + " " +
+                "                   </p>222\n" +
+                "                   <p><a class=\"showurl\" href=\"" + this.docurl + "\">" + docurl + "&nbsp;&nbsp;&nbsp;" + this.time + "</a> <span class=\"lab\">" + this.editor + " - " + this.source + "</span></p>\n" +
+                "                </div>\n" +
+                "                </div>\n" +
+                "                </div>"
+
+            $(".itemList").append(divStr);
+
+        });
+        //分页条
+        var pageStr = "<ul>";
+        // 1.1 上一页 :
+        if (data.page > 1) {
+            //如何禁用掉某一个元素的属性呢? js:javascript:void(0)
+            pageStr += "<li><a href='javascript:void(0)' data-page=" + (data.page - 1) + ">< 上一页</a></li>";
+        }
+
+        //1.2 分页码数: 展示七个条码     前三 后三             1 2 3 4 5 6 7 8 9 10
+        //如果总页数就7个:展示全部页面
+        if (data.pageNumber <= 7) {
+            //直接展示所有的页数
+            for (var i = 1; i <= data.pageNumber; i++) {
+                if (data.page == i) {
+                    pageStr += "<li class='on'>" + i + "</li>";
+                } else {
+                    pageStr += "<li><a href='javascript:void(0)' data-page=" + i + " >" + i + "</a></li>"
+                }
+
+            }
+
+        } else {
+            //总页数大于7
+
+            // 如果用户: 当前页 1~4  展示1~7
+            if (data.page <= 4) {
+                for (var i = 1; i <= 7; i++) {
+                    if (data.page == i) {
+                        pageStr += "<li class='on'>" + i + "</li>";
+                    } else {
+                        pageStr += "<li><a href='javascript:void(0)' data-page=" + i + " >" + i + "</a></li>"
+                    }
+                }
+            }
+
+            //如果用户: 当前页 大于4,展示: 当前页-3 ~ 当前页+3
+            // 1 2 3 4 5 6 7 8 9 10
+            if (data.page > 4 && data.page <= data.totalPage - 3) {
+
+                for (var i = data.page - 3; i <= data.page + 3; i++) {
+
+                    if (data.page == i) {
+                        pageStr += "<li class='on'>" + i + "</li>";
+                    } else {
+                        pageStr += "<li><a href='javascript:void(0)' data-page='" + i + "' >" + i + "</a></li>"
+                    }
+
+                }
+            }
+
+            //如果当前页+3大于等于总页数: 展示 总页数-6
+            if (data.page + 3 >= data.totalPage) {
+                for (var i = data.totalPage - 6; i <= data.totalPage; i++) {
+                    if (data.page == i) {
+                        pageStr += "<li class='on'>" + i + "</li>";
+                    } else {
+                        pageStr += "<li><a href='javascript:void(0)' data-page='" + i + "' >" + i + "</a></li>"
+                    }
+                }
+            }
+
+        }
+
+
+        //1.3 下一页:
+        if (data.page < data.totalPage) {
+            pageStr += "<li><a href='javascript:void(0)' data-page='" + (data.page + 1) + "'>下一页 ></a></li>";
+        }
+
+        pageStr += "</ul>";
+
+        $(".pageList").html(pageStr);
+    }
+
+</script>
+
+</body>
+
+</html>
