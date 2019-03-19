@@ -56,9 +56,6 @@ public class NewsDAO {
             // 缓存连接
             jedis.sadd(Constance.SPIDER_URL_INSERTEDSET, news.getDocurl());
             jedis.close();
-            // 添加到创建索引消息队列topic:news
-            SpiderKafkaProducer skp = new SpiderKafkaProducer();
-            skp.saveSpiderTokafka(gson.toJson(news));
         }
     }
 }

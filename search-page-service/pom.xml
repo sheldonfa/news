@@ -6,9 +6,11 @@
     <groupId>com.mypro</groupId>  
     <version>1.0-SNAPSHOT</version> 
   </parent>  
+  <packaging>war</packaging>  
   <modelVersion>4.0.0</modelVersion>  
-  <artifactId>news-protocal</artifactId>  
-  <packaging>war</packaging>
+  <groupId>com.mypro</groupId>  
+  <artifactId>search-page-service</artifactId>  
+  <version>1.0-SNAPSHOT</version>  
   <dependencies> 
     <!-- spring 相关的依赖包 -->  
     <dependency> 
@@ -35,45 +37,7 @@
       <groupId>org.springframework</groupId>  
       <artifactId>spring-web</artifactId> 
     </dependency>  
-    <!-- springmvc的相关依赖包 -->  
-    <dependency> 
-      <groupId>org.springframework</groupId>  
-      <artifactId>spring-webmvc</artifactId> 
-    </dependency>  
-    <!-- mybatis 相关的依赖包 -->  
-    <dependency> 
-      <groupId>org.mybatis</groupId>  
-      <artifactId>mybatis</artifactId> 
-    </dependency>  
-    <dependency> 
-      <groupId>org.mybatis</groupId>  
-      <artifactId>mybatis-spring</artifactId> 
-    </dependency>  
-    <!-- 数据库的相关依赖包 -->  
-    <dependency> 
-      <groupId>mysql</groupId>  
-      <artifactId>mysql-connector-java</artifactId> 
-    </dependency>  
-    <!-- 连接池 -->  
-    <dependency> 
-      <groupId>com.alibaba</groupId>  
-      <artifactId>druid</artifactId> 
-    </dependency>  
-    <!-- 日志相关的依赖包 -->  
-    <dependency> 
-      <groupId>org.slf4j</groupId>  
-      <artifactId>slf4j-log4j12</artifactId> 
-    </dependency>  
-    <dependency> 
-      <groupId>log4j</groupId>  
-      <artifactId>log4j</artifactId> 
-    </dependency>  
-    <!--json相关的依赖-->  
-    <dependency> 
-      <groupId>com.alibaba</groupId>  
-      <artifactId>fastjson</artifactId> 
-    </dependency>  
-    <!--dubbox 相关依赖-->  
+    <!--dubbox相关依赖-->  
     <dependency> 
       <groupId>com.alibaba</groupId>  
       <artifactId>dubbo</artifactId> 
@@ -89,29 +53,62 @@
     <dependency> 
       <groupId>javassist</groupId>  
       <artifactId>javassist</artifactId> 
-    </dependency>
-
-    <dependency>
-      <groupId>com.mypro</groupId>
-      <artifactId>news-pojo</artifactId>
-      <version>1.0-SNAPSHOT</version>
-    </dependency>
-
-    <dependency>
-      <groupId>redis.clients</groupId>
-      <artifactId>jedis</artifactId>
-      <version>2.9.0</version>
-    </dependency>
-
-    <dependency>
-      <groupId>com.mypro</groupId>
-      <artifactId>search-interface</artifactId>
-      <version>1.0-SNAPSHOT</version>
-    </dependency>
-
+    </dependency>  
+    <!--需要将接口的工程依赖进来-->  
+    <dependency> 
+      <groupId>com.mypro</groupId>  
+      <artifactId>search-interface</artifactId>  
+      <version>1.0-SNAPSHOT</version> 
+    </dependency>  
+    <dependency> 
+      <groupId>com.mypro</groupId>  
+      <artifactId>search-page-interface</artifactId>  
+      <version>1.0-SNAPSHOT</version> 
+    </dependency>  
+    <!--spingkafka kafkaclient-->  
+    <dependency> 
+      <groupId>org.springframework.kafka</groupId>  
+      <artifactId>spring-kafka</artifactId>  
+      <version>1.3.5.RELEASE</version> 
+    </dependency>  
+    <dependency> 
+      <groupId>org.springframework</groupId>  
+      <artifactId>spring-test</artifactId> 
+    </dependency>  
+    <dependency> 
+      <groupId>junit</groupId>  
+      <artifactId>junit</artifactId>  
+      <version>4.12</version> 
+    </dependency>  
+    <dependency> 
+      <groupId>org.slf4j</groupId>  
+      <artifactId>slf4j-api</artifactId>  
+      <version>1.7.13</version> 
+    </dependency>  
+    <dependency> 
+      <groupId>com.google.code.gson</groupId>  
+      <artifactId>gson</artifactId>  
+      <version>2.8.1</version> 
+    </dependency>  
+    <dependency> 
+      <groupId>commons-codec</groupId>  
+      <artifactId>commons-codec</artifactId>  
+      <version>1.10</version> 
+    </dependency>  
+    <!--fastjson-->  
+    <dependency> 
+      <groupId>com.alibaba</groupId>  
+      <artifactId>fastjson</artifactId>  
+      <version>1.2.28</version> 
+    </dependency>  
+    <!--jedis-->  
+    <dependency> 
+      <groupId>redis.clients</groupId>  
+      <artifactId>jedis</artifactId>  
+      <version>2.9.0</version> 
+    </dependency> 
   </dependencies>  
   <build> 
-    <!--tomcat7的插件-->  
     <plugins> 
       <plugin> 
         <groupId>org.apache.tomcat.maven</groupId>  
@@ -119,7 +116,7 @@
         <version>2.2</version>  
         <configuration> 
           <path>/</path>  
-          <port>9002</port> 
+          <port>9003</port> 
         </configuration> 
       </plugin> 
     </plugins> 

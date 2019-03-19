@@ -2,6 +2,7 @@ package com.mypro.spider.news.news163;
 
 import com.google.gson.Gson;
 import com.mypro.spider.domain.News;
+import com.mypro.spider.producer.SpiderKafkaProducer;
 import com.mypro.spider.utils.Constance;
 import com.mypro.spider.utils.HttpClientUtils;
 import com.mypro.spider.utils.JedisUtils;
@@ -11,12 +12,11 @@ import org.jsoup.select.Elements;
 import redis.clients.jedis.Jedis;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
-public class Spider163Parse {
+public class Spider163Step2 {
 
+    private static SpiderKafkaProducer spiderKafkaProducer = new SpiderKafkaProducer();
 
     public static void main(String[] args) throws IOException {
         while (true) {
@@ -29,11 +29,15 @@ public class Spider163Parse {
             }
             // 解析成对象
             News news = parseNewsIntem(list.get(1));
-            Gson gson = new Gson();
-            // 存入持久化对象队列
-            jedis = JedisUtils.getJedis();
-            jedis.lpush(Constance.SPIDER_NEWS_QUEUE, gson.toJson(news));
-            jedis.close();
+            if(news!=null){
+                Gson gson = new Gson();
+                // 存入持久化对象队列
+                spiderKafkaProducer.saveSpiderTokafka(gson.toJson(news));
+                // 标记为已存储
+                jedis = JedisUtils.getJedis();
+                jedis.sadd(Constance.SPIDER_URL_INSERTEDSET, news.getDocurl());
+                jedis.close();
+            }
         }
     }
 
@@ -52,7 +56,13 @@ public class Spider163Parse {
         String[] split = timeAndSource.text().split("　来源: ");
         news.setTime(split[0]);
         // 2.3 解析来源
-        news.setSource(split[1]);
+        try{
+            news.setSource(split[1]);
+        }catch (Exception e){
+            System.out.println("无法用‘来源：’切分:");
+            System.out.println(timeAndSource.text());
+            return null;
+        }
         // 2.4 解析正文
         Elements contentNode = document.select("#endText > p");
         String content = contentNode.text();

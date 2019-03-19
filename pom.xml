@@ -13,6 +13,8 @@
         <module>news-protocal</module>
         <module>news-pojo</module>
         <module>spider</module>
+        <module>search-page-interface</module>
+        <module>search-page-service</module>
     </modules>
 
     <packaging>pom</packaging>
